@@ -8,7 +8,7 @@ const app = express();
 
 app.use(express.json())
 
-app.get("/", () => {
+app.get("/", (req, res) => {
     res.send("Hello I am vivek a full stack developer from india")
 })
 
