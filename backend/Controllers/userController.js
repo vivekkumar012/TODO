@@ -87,7 +87,10 @@ export const login = async (req, res) => {
             token
         })
     } catch (error) {
-        
+        return res.status(500).json({
+            message: "Server error during user signin",
+            error: error.message,
+        });
     }
 }
 
